@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import { lazy, Suspense } from "react";
+import Loading from "./components/loading.jsx";
+const Index = lazy( () => import('./components/index.jsx'))
 
-function App() {
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
+    <main className="flex items-center justify-center h-screen font-body bg-neutral-300">
+      <Suspense fallback ={<Loading />}>
+        <Index />
+      </Suspense>
+    </main>
+  )
 }
 
 export default App;
