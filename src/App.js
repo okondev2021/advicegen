@@ -5,7 +5,7 @@ const Index = lazy( () => import('./components/index.jsx'))
 
 const App = () => {
   return (
-    <main className="flex flex-col items-center justify-center h-screen gap-[100px] font-body bg-neutral-300">
+    <main className="flex items-center justify-center h-screen font-body bg-neutral-300">
       <Suspense fallback ={<Loading />}>
         <Index />
       </Suspense> 

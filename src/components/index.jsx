@@ -42,7 +42,7 @@ const Index = () => {
 
 
     return (
-        <div className=" w-[40%] bg-neutral-200 rounded-lg py-10 px-10 relative">
+        <div className=" w-[40%] mobile:w-[90%] tab:w-[60%] bg-neutral-200 rounded-lg py-10 px-10 relative">
             <section className="font-bold text-cyann-200">
                 <p className="text-center text-[10px] tracking-space">ADVICE #{advice?.id}</p>
             </section>
@@ -53,8 +53,8 @@ const Index = () => {
                 <img src={patternDivider} alt="" />
             </section>
             <section className="flex items-center justify-center">
-                <button ref={buttonRef} onClick={getAdviceBtn} className="absolute flex items-center justify-center rounded-full cursor-pointer w-11 h-11 bg-cyann-200 -bottom-[10%]">
-                    <img className="w-5 h-5" src={diceIcon} alt="" />
+                <button ref={buttonRef} onClick={getAdviceBtn} className="myshadow absolute flex items-center justify-center rounded-full cursor-pointer w-11 h-11 bg-cyann-200 -bottom-[10%]">
+                    <img  className="w-5 h-5" src={diceIcon} alt="" />
                 </button>
             </section>
         </div>

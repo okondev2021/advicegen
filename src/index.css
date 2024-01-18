@@ -4,12 +4,7 @@
 @tailwind utilities;
 
 
-.round{
-    /* 
-    animation: spinner 4s linear infinite; */
-}
 
-@keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+.myshadow:hover{
+    box-shadow: 1px 1px 40px hsl(150, 100%, 66%);
+}
