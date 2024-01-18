@@ -7,6 +7,8 @@ const Index = () => {
 
     const [advice, setAdvice] = useState(null)
 
+    const buttonRef = useRef(null)
+
     const getAdvice = () => {
         fetch('https://api.adviceslip.com/advice')
         .then(response => response.json())
@@ -18,24 +20,23 @@ const Index = () => {
 
     useEffect( () => {
         getAdvice()
-
-        console.log('red')
     }, [])
 
-    const buttonRef = useRef(null)
-    const getAdviceBtn = (e) => {
-        buttonRef.current.classList.add('cursor-not-allowed')
-        // setAdvice(null)
-        // buttonRef.current.classList.add('cursor-not-allowed')
-        // console.log(buttonRef.current.classList)
-        // // 
-        // setTimeout( () => {
-        //     getAdvice()
-        // }, 500)
+    const getAdviceBtn = () => {
+        const button = buttonRef.current
+        setAdvice(null)
         // 
-        // setTimeout( () => {
-        //     buttonRef.current.classList.remove('cursor-not-allowed')
-        // }, 2000)
+        button.classList.add('cursor-not-allowed')
+        button.classList.remove('cursor-pointer')
+        // 
+        setTimeout( () => {
+            getAdvice()
+        }, 500)
+        // 
+        setTimeout( () => {
+            button.classList.remove('cursor-not-allowed')
+        button.classList.add('cursor-pointer')
+        }, 2000)
     }
 
 
