@@ -1,10 +1,6 @@
-import './css/loading.css'
 const Loading = () => {
     return (
-        <div className="loading-container">
-            <div className="loading"></div>
-            <div id="loading-text">loading...</div>
-        </div>
+        <div className="m-auto border-4 border-transparent border-solid rounded-full border-r-cyann-100 border-l-cyann-100 h-[70px] w-[70px] animate-spin"></div>
     )
 }
 

@@ -10,9 +10,6 @@ module.exports = {
     fontFamily:{
       body:['Manrope']
     },
-    fontSize:{
-      'xxsm' : '10px'
-    },
     extend: {
       colors:{
         'cyann':{
@@ -25,6 +22,9 @@ module.exports = {
           '300':'hsl(218, 23%, 16%)'
         }
       },
+      boxShadow:{
+        'large': '0 35px 60px -15px hsl(150, 100%, 66%)'
+      }
     },
   },
   plugins: [],
